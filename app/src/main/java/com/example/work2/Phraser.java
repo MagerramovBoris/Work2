@@ -1,7 +1,6 @@
 package com.example.work2;
 
 public class Phraser {
-
     public static String[] PhraserGen() {
 //Создайте три набора слов для выбора. Можете добавлять собственные слова!
         String[] wordListOne = {"круглосуточный", "трех-звенный",
@@ -25,8 +24,8 @@ public class Phraser {
         int twoLength = wordListTwo.length;
         int threeLength = wordListThree.length;
         //Генерируем три случайных числа
-        int rl = (int) (Math.random() * oneLength) ;
-        int r2 = (int) (Math.random() * twoLength) ;
+        int rl = (int) (Math.random() * oneLength);
+        int r2 = (int) (Math.random() * twoLength);
         int r3 = (int) (Math.random() * threeLength);
         //Теперь строим фразу
         // TODO 1.1 Поставьте Breakpoint
@@ -35,9 +34,19 @@ public class Phraser {
                 wordListTwo[r2] + " " +
                 wordListThree[r3]
                 + ".";
-
-        return new String[] {phrase1};
+        // Измененная фраза
+        String phrase2 = wordListOne[rl].substring(0,1).toUpperCase() +
+                wordListOne[rl].substring(1).toLowerCase() + " " +
+                "- это " +
+                wordListTwo[r2] + " " +
+                wordListThree[r3] +
+                // Фраза заканчивается точкой.
+                ".";
+        // Возвращает массив из 2-х сгенерированных строк
+        return new String[] {phrase1, phrase2};
     }
 }
+
+
 
 
