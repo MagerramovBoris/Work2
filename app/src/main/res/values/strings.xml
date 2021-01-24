@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Work2</string>
+    <string name="phrase_1">phrase one</string>
+    <string name="phrase_2">phrase two</string>
 </resources>

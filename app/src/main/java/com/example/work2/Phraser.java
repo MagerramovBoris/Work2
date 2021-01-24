@@ -2,7 +2,7 @@ package com.example.work2;
 
 public class Phraser {
 
-    public static String PhraserGen() {
+    public static String[] PhraserGen() {
 //Создайте три набора слов для выбора. Можете добавлять собственные слова!
         String[] wordListOne = {"круглосуточный", "трех-звенный",
                 "30-футовьй", "взаимный", "обоюдный выигрыш", "фронтэнд",
@@ -30,8 +30,13 @@ public class Phraser {
         int r3 = (int) (Math.random() * threeLength);
         //Теперь строим фразу
         // TODO 1.1 Поставьте Breakpoint
-        String phrase = wordListOne[rl] + " " +
-                wordListTwo[r2] + " " + wordListThree[r3];
+        String phrase1 = "Всё, что нам нужно – это " +
+                wordListOne[rl] + " " +
+                wordListTwo[r2] + " " +
+                wordListThree[r3]
+                + ".";
+
+        return new String[] {phrase1};
     }
 }
 
